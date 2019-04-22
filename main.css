@@ -39,6 +39,7 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  overflow: hidden;
 }
 
 h1 {
@@ -49,7 +50,8 @@ h1 {
   font-family: 'Comic-Sans';
 }
 .hero-image {
-  width: 100%;
+  width: 107%;
+  margin-left: -14px;
 }
 .catch-phrase {
   font-style: italic;
@@ -65,7 +67,6 @@ h1 {
   z-index: 98;
   height: 216px;
   width: 154px;
-  /* margin: -12px 10px; */
   background-size: 111%;
   background-position: center;
   -webkit-transition: all ease 0.3s;
@@ -85,25 +86,25 @@ h1 {
 .logos {
   height: 237px;
 }
-.spacex {
-  background-image: url('https://www.spacex.com/sites/spacex/files/spacex_default.jpg');
+
+.spacex,
+.tesla,
+.solarcity,
+.paypal {
   background-size: 100% 100%;
   background-repeat: no-repeat;
+}
+.spacex {
+  background-image: url('https://www.spacex.com/sites/spacex/files/spacex_default.jpg');
 }
 .tesla {
   background-image: url('http://www.car-brand-names.com/wp-content/uploads/2015/05/Tesla-Motors-logo-2.jpg');
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
 }
 .solarcity {
   background-image: url('https://i.vimeocdn.com/video/103335549_1280x720.jpg');
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
 }
 .paypal {
   background-image: url('https://tinyurl.com/y2lkfmdk');
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
 }
 .bio {
   padding: 25px;
@@ -115,4 +116,34 @@ h1 {
 
 .left-page {
   padding: 0;
+}
+
+@media (max-width: 984px) {
+  body {
+    overflow: auto;
+  }
+  .section {
+    display: grid;
+  }
+  .bio {
+    padding: 3em;
+    width: 100%;
+  }
+  .body {
+    display: flex;
+  }
+  .right-page {
+    margin: 0;
+    width: 100%;
+  }
+  .logos {
+    display: flex;
+  }
+}
+
+@media (max-width: 384px) {
+  .logos {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
