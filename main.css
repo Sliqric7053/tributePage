@@ -1,0 +1,118 @@
+*/ :root {
+  --yellow: #ffc600;
+  --black: #272727;
+}
+
+html {
+  /* border-box box model allows us to add padding and border to our elements without increasing their size */
+  box-sizing: border-box;
+  /* A system font stack so things load nice and quick! */
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
+    Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  color: var(--black);
+  text-shadow: 0 2px 0 rgba(0, 0, 0, 0.07);
+}
+
+/*
+    WAT IS THIS?!
+    We inherit box-sizing: border-box; from our <html> selector
+    Apparently this is a bit better than applying box-sizing: border-box; directly to the * selector
+  */
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 0 5px 0;
+}
+
+body {
+  background: no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+h1 {
+  font-size: 7em;
+  font-family: 'Kaushan Script';
+}
+.hero-name {
+  font-family: 'Comic-Sans';
+}
+.hero-image {
+  width: 100%;
+}
+.catch-phrase {
+  font-style: italic;
+}
+.intro-text {
+  color: #337ab7;
+}
+.learn-more {
+  font-size: 2em;
+  font-family: 'Kaushan Script', cursive;
+}
+.logo {
+  z-index: 98;
+  height: 216px;
+  width: 154px;
+  /* margin: -12px 10px; */
+  background-size: 111%;
+  background-position: center;
+  -webkit-transition: all ease 0.3s;
+  -moz-transition: all ease 0.3s;
+  -o-transition: all ease 0.3s;
+  -ms-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+}
+.logo:hover {
+  z-index: 99;
+  height: 260px/2;
+  width: 180px/2;
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+}
+.logos {
+  height: 237px;
+}
+.spacex {
+  background-image: url('https://www.spacex.com/sites/spacex/files/spacex_default.jpg');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+.tesla {
+  background-image: url('http://www.car-brand-names.com/wp-content/uploads/2015/05/Tesla-Motors-logo-2.jpg');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+.solarcity {
+  background-image: url('https://i.vimeocdn.com/video/103335549_1280x720.jpg');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+.paypal {
+  background-image: url('https://tinyurl.com/y2lkfmdk');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+.bio {
+  padding: 25px;
+}
+
+.right-page {
+  margin-left: -30px;
+}
+
+.left-page {
+  padding: 0;
+}
